@@ -19,7 +19,7 @@ def application(environ, start_response):
 	html = '<html lang = "ja">\n'
 	html += '<head>\n'
 	html += '<meta charset = "UTF-8">\n'
-	html += '<title>WSGI テスト</title>\n'
+	html += '<title>さえずり</title>\n'
 	html += '<!-- Compiled and minified CSS --> '\
       '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">'\
       '<!-- Compiled and minified JavaScript -->'\
