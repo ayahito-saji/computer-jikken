@@ -20,7 +20,10 @@ def application(environ, start_response):
 	html += '<head>\n'
 	html += '<meta charset = "UTF-8">\n'
 	html += '<title>WSGI テスト</title>\n'
-	html += '<link rel = "stylesheet" href = "default.css">\n'
+	html += '<!-- Compiled and minified CSS --> '\
+      '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">'\
+      '<!-- Compiled and minified JavaScript -->'\
+      '<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>'
 	html += '</head>\n'
 
 	form = cgi.FieldStorage(environ = environ, keep_blank_values = True)
