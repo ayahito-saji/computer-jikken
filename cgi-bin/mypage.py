@@ -44,7 +44,8 @@ def application(environ,start_response):
         start_response(status,response_headers)
         return ''
 
-    html += '<body>\n'
+    html += '<body>\n' \
+            '<h1>マイページ</h1>'
 
     con_fab = sqlite3.connect(fabdb)
     con_fab.text_factory = str
