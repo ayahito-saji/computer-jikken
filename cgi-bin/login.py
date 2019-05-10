@@ -1,4 +1,4 @@
-#! /usr/bin/python
+﻿#! /usr/bin/python
 # -*- coding: utf-8 -*-
 
 import cgi
@@ -73,7 +73,7 @@ def application(environ,start_response):
         html += '<body>\n' \
             '<div class="form1">\n' \
             '<form method = "POST">\n' \
-            '<h1>新規登録画面</h1>\n'\
+            '<h1>新規登録</h1>\n'\
             'ユーザーID（英数字）<input type="text" name="newId"><br>\n' \
             'パスワード（英数字）<input type="password" name="newPass"><br>\n' \
             '<input type="submit" value="登録">\n' \
