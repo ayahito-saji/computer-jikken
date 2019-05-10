@@ -61,8 +61,25 @@ def application(environ,start_response):
     html = '<html lang="ja">\n' \
            '<head>\n' \
            '<meta charset="UTF-8">\n' \
-           '<title>WSGI テスト</title>\n' \
+           '<title>ログイン</title>\n' \
            '<link rel="stylesheet" href="default.css">\n' \
+           '<style type="text/css">' \
+           '.ID {display:inline-block;width:80px;text-align:center;}' \
+           '.body {display:inline-block;text-align:center;background-color:white;padding:30px;border: solid 2px black;border-radius:30px;box-shadow:20px 30px 333px white;margin-top:50px;font-family: 'Kosugi Maru', sans-serif;}' \
+           '.main{text-align:center}' \
+           '.back{height:100%;background-color:#928c36;background:linear-gradient(#928c36, black)}' \
+           '.login_button{margin-top:10px;}' \
+           '.img{position:absolute;bottom:0px; right:0px;width:50%;z-index:-1;}' \
+           '.welcome {margin-left:30px;margin-top:30px;}' \
+           '</style>' \
+           '' \
+           '' \
+           '' \
+           '' \
+           '' \
+           '' \
+           '' \
+
            '</head>\n'
 #フォームデータを取得
     wsgi_input = environ["wsgi.input"]
@@ -84,14 +101,17 @@ def application(environ,start_response):
 #入力フォームの内容が空の場合（初めてページを開いた場合も含む
 
             # HTML（入力フォーム部分）
-            html += '<body>\n' \
+            html += '<body class = "back">\n' \
                 '<div class="form1">\n' \
                 '<form method = "POST">\n' \
-                '<h1>ログイン</h1>\n'\
-                'ユーザーID（英数字）<input type="text" name="ID"><br>\n' \
-                'パスワード（英数字）<input type="password" name="password"><br>\n' \
+                '<div class = "main">'\
+                '<span class = "body">' \
+                '<span class = "ID">ID</span><input type="text" name="ID"><br>\n' \
+                '<span class = "ID">パスワード</span><input type="password" name="password"><br>\n' \
                 '<input type="submit" name="login" value="ログイン">\n' \
                 '<input type="submit" name="signUp" value="はじめての方はこちら">\n' \
+                '</span>' \
+                '</div>' \
                 '</form>\n' \
 
 #入力フォームの内容が空でない場合
